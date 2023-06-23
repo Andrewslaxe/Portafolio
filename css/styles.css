@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+
 }
 
 html,
@@ -44,7 +45,7 @@ header {
 }
 
 .hide {
-  top: -100px;
+  transform: translateY(-100%);
   transition: all 0.3s;
 }
 
@@ -166,14 +167,17 @@ header {
   width: 100%;
 }
 
-.skills-grid {
+.skills-grid,
+.hobbies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  justify-items: center;
   gap: 20px;
   width: 100%;
 }
 
-.skills-grid .card {
+.skills-grid .card,
+.hobbies-grid .card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,23 +185,38 @@ header {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   aspect-ratio: 1/1;
+  transition: all 0.3s ease;
 }
 
-.skills-grid .card img {
-  width: 80px;
+.skills-grid .card:hover,
+.hobbies-grid .card:hover {
+  transform: scale(1.2);
 }
 
-.skills-grid .card span {
+.skills-grid .card img,
+.hobbies-grid .card img {
+  height: 80px;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+}
+
+.skills-grid .card span,
+.hobbies-grid .card span {
   opacity: 0;
   transition: all 0.3s ease;
 }
 
-.skills-grid .card:hover span {
+.skills-grid .card:hover img,
+.hobbies-grid .card:hover img {
+  transform: translateY(0px);
+}
+
+.skills-grid .card:hover span,
+.hobbies-grid .card:hover span {
   opacity: 1;
   font-size: 16px;
   font-weight: bold;
   color: black;
-
 }
 
 .hobbies {
@@ -231,40 +250,193 @@ header {
   width: 100%;
 }
 
-.hobbies-grid .card {
+.hobbies-grid .card img {
+  height: 80px;
+  width: auto;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.qualification {
+  padding: 50px 0;
+  margin: auto;
+  flex-direction: column;
+  gap: 20px;
+  width: 95%;
+}
+
+.qualification h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--primary-orange);
+}
+
+.qualification-img-container {
+  min-width: 300px;
+  width: 50%;
+}
+
+.qualification-img-container img {
+  width: 100%;
+}
+
+.qualification h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--primary-orange);
+}
+
+.cards-work,
+.cards-education {
+  width: 100%;
+}
+
+.cards-work .title,
+.cards-education .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 20px 0;
+}
+
+.cards-work .title img,
+.cards-education .title img {
+  height: 50px;
+}
+
+
+.cards-work .card,
+.cards-education .card {
+  height: 200px;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 1/1;
   transition: all 0.3s ease;
 }
 
-.hobbies-grid .card img {
-  width: 70px;
+.cards-education .card {
+  height: auto;
+}
+
+.cards-work .card img,
+.cards-education .card img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
   transition: all 0.3s ease;
 }
 
-.hobbies-grid .card span {
+.cards-work .card-content {
+  transition: all 0.3s ease;
+  position: relative;
+  top: -40px;
+  z-index: 1;
+  text-align: center;
+}
+
+.cards-work .card-content span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-content p {
+  opacity: 0;
+  z-index: -1;
   display: none;
 }
 
-
-.hobbies-grid .card:hover img {
-  transform: scale(1.4);
+.cards-work .card:hover img {
+  opacity: 0.2;
 }
 
+.cards-work .card img:hover + .card-content,
+.cards-work .card-content:hover {
+  top: -180px;
+}
 
+.cards-work .card:hover .card-content span {
+  color: black;
+  width: 100%;
+}
+
+.card:hover .card-content p {
+  opacity: 1;
+  font-size: 16px;
+  display: block;
+}
+
+.sas span {
+  color: black !important;
+}
+
+.cards-education .card-content {
+  text-align: center;
+}
+
+.cards-education .card-content span {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.qualification-block {
+  width: 90%;
+}
+
+.qualification-flex {
+  flex-direction: column;
+  width: 80%;
+}
 
 @media (min-width: 768px) {
-  .hero-img-container {
-    width: 70%;
+
+  .hero-img-container,
+  .about-img-container,
+  .skills-img-container,
+  .hobbies-img-container {
+    height: 50vh;
+  }
+
+  .hero-img-container img,
+  .about-img-container img,
+  .skills-img-container img,
+  .hobbies-img-container img {
+    height: 100%;
+    width: auto;
   }
 
   .about-img-container {
-    width: 40%;
+    height: 50vh;
+  }
+
+  .skills {
+    height: 100vh;
+  }
+
+  .hobbies {
+    height: 100vh;
+  }
+
+  .hobbies-img-container {
+    height: 50vh;
+  }
+
+  .qualification {
+    min-height: 100vh;
   }
 }
