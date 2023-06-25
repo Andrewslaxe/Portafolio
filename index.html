@@ -19,18 +19,43 @@
           </svg>
           <span id="logo-text">Jaime Peraza</span>
         </div>
-        <button class="menu">
+        <button id="menu" class="menu" onclick="toggleNav()">
           <div></div>
           <div></div>
           <div></div>
         </button>
+        <nav id="nav" class="nav hide">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <div class="nav-link active" onclick="scrollToSection('home')">Home</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" onclick="scrollToSection('about')">About</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" onclick="scrollToSection('skills')">Skills</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" onclick="scrollToSection('hobbies')">Hobbies</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" onclick="scrollToSection('qualification')">Qualification</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" onclick="scrollToSection('work')">Work</div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" onclick="scrollToSection('contact')">Contact</div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <section class="hero center-container">
+    <section id="home" class="hero center-container">
       <div class="hero-img-container center-container">
         <img src="assets/hero.webp" alt="hero" class="hero-img">
       </div>
-      <div>
+      <div class="home-content">
         <div class="hero-title">
           Hello!
         </div>
@@ -38,7 +63,6 @@
           I'm Jaime, a web developer based in Bogotá.
         </div>
       </div>
-
     </section>
     <hr>
     <section id="about" class="center-container">
@@ -57,7 +81,7 @@
       </div>
     </section>
     <hr>
-    <section class="skills center-container">
+    <section id="skills" class="skills center-container">
       <h2>My Skills</h2>
       <div class="skills-img-container center-container">
         <img src="assets/skills-hero.webp" alt="skills" class="border-img" />
@@ -106,7 +130,7 @@
       </div>
     </section>
     <hr>
-    <section class="hobbies center-container">
+    <section id="hobbies" class="hobbies center-container">
       <h2>My Hobbies</h2>
       <div class="hobbies-img-container center-container">
         <img src="assets/casual-life-3d-man-searching-music-with-phone (2).webp" alt="hobbies" class="border-img" />
@@ -138,7 +162,7 @@
         </div>
     </section>
     <hr>
-    <section class="qualification center-container">
+    <section id="qualification" class="qualification center-container">
       <h2>Qualification</h2>
       <div class="qualification-block center-container">
         <div class="qualification-img-container center-container">
@@ -163,7 +187,7 @@
               </div>
               <div class="card">
                 <img src="assets/logo_sas.png" alt="html" />
-                <div class="card-content sas">
+                <div class="sas card-content ">
                   <span>IT Consultant</span>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio earum quidem vitae mollitia a rerum
                     sapiente quas laborum iste, aliquam impedit eum deserunt optio laudantium voluptatem corrupti
@@ -248,8 +272,9 @@
               <h3>Greenhouse Control</h3>
             </div>
             <span class="subtitle">React | Express | MongoDB</span>
-            <div class="description">An application using ESP32 microcontroller to send temperature to DB and
-              controlling the parameters from the web page </div>
+            <div class="description">An application using a ESP32 microcontroller network to send temperature to DB and
+              controlling the light bulb, fan and heater from the web page in order to change the light and the
+              temperature in the place. </div>
           </div>
           <div class="view">
             <a href="#" class="btn">View Project</a>
@@ -258,6 +283,19 @@
           <img src="assets/Copia de Diseño sin título.png" alt="Greenhouse Control" />
         </div>
       </div>
+    </section>
+    <hr>
+    <section id="contact">
+      <div class="contact-title">
+        <img src="assets/icons8-hexagon.svg" alt="html" />
+        <h2>Contact</h2>
+      </div>
+      <ul class="networks">
+        <li>Mail</li>
+        <li>Linkedin</li>
+        <li>Github</li>
+        <li>Resume</li>
+      </ul>
     </section>
   </div>
   <script src="main.js"></script>
