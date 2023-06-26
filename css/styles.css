@@ -121,7 +121,6 @@ header {
   padding-left: 60px;
 }
 
-
 .nav-link {
   font-size: 30px;
   font-weight: bold;
@@ -130,7 +129,8 @@ header {
   transition: all 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.networks li:hover {
   color: rgb(116, 116, 116);
 }
 
@@ -196,6 +196,7 @@ header {
   font-size: 40px;
   font-weight: bold;
   color: var(--primary-orange);
+  text-align: center;
 }
 
 .about-img-container {
@@ -245,6 +246,7 @@ header {
   width: 100%;
   justify-content: center;
   gap: 5%;
+  align-items: center;
 }
 
 .skills-grid,
@@ -486,7 +488,7 @@ header {
 }
 
 .qualification-block {
-  width: 90%;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -581,6 +583,12 @@ header {
   padding: 50px 0;
 }
 
+#about-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .contact-title {
   display: flex;
   gap: 8px;
@@ -608,6 +616,8 @@ header {
   font-size: 24px;
   font-weight: bold;
   list-style: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -746,5 +756,37 @@ header {
 
   .qualification-img-container {
     display: none;
+  }
+
+  .project-img {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  #work {
+    min-width: 40%;
+    width: 300px;
+  }
+
+  #work h2 {
+    font-size: 5vh;
+  }
+
+  #work h3 {
+    font-size: 5vh;
+  }
+
+  .contact-title h2 {
+    font-size: 5vh;
+  }
+
+  .contact-title img {
+    width: 5vh;
+  }
+
+  .networks {
+    display: flex;
+    flex-direction: row;
+    padding-left: calc(5vh + 10px);
   }
 }
