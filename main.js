@@ -21,17 +21,20 @@ const toggleNav = () => {
 }
 
 const scrollToSection = (place) => {
-  document.getElementById("nav").classList.toggle("hide")
-  document.getElementById("menu").classList.toggle("active")
-  document.getElementsByTagName("body")[0].classList.toggle("no-scroll")
-  document.getElementById("header").classList.add("hide")
-  document.getElementById(place).scrollIntoView({
-    behavior: "smooth",
-  })
-  flagHeaderShow = false
-  setTimeout(() => {
-    flagHeaderShow = true
-  }, 1000)
+  if (place === "home" && window.scrollY === 0) {
+  } else {
+    document.getElementById("nav").classList.toggle("hide")
+    document.getElementById("menu").classList.toggle("active")
+    document.getElementsByTagName("body")[0].classList.toggle("no-scroll")
+    document.getElementById("header").classList.add("hide")
+    document.getElementById(place).scrollIntoView({
+      behavior: "smooth",
+    })
+    flagHeaderShow = false
+    setTimeout(() => {
+      flagHeaderShow = true
+    }, 1000)
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {

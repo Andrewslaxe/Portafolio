@@ -5,11 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jaime Peraza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="assets/hollow.png" />
+  <meta name="description" content="Jaime Peraza, a web developer based in Bogotá. Discover more info here!">
 </head>
 
 <body>
+  <h1 id="h1-name">Jaime Peraza</h1>
   <div class="layout">
     <header class="center-container" id="header">
       <div class="container">
@@ -20,15 +24,16 @@
           </svg>
           <span id="logo-text">Jaime Peraza</span>
         </div>
-        <button id="menu" class="menu" onclick="toggleNav()">
+        <button id="menu" class="menu" onclick="toggleNav()" aria-labelledby="label">
           <div></div>
           <div></div>
           <div></div>
         </button>
+        <div id="label">Button</div>
         <nav id="nav" class="nav hide">
           <ul class="nav-list">
             <li class="nav-item">
-              <div class="nav-link" onclick="scrollToSection('home')">Home</div>
+              <div class="nav-link active" onclick="scrollToSection('home')">Home</div>
             </li>
             <li class="nav-item">
               <div class="nav-link" onclick="scrollToSection('about')">About</div>
@@ -70,7 +75,7 @@
       <h2>So, What about me?</h2>
       <div id="about-container">
         <div class="about-img-container center-container">
-          <img src="assets/about-hero.webp" alt="about" class="border-img" />
+          <img src="assets/about-hero.webp" alt="about" class="border-img" loading="lazy" />
         </div>
         <div class="content">
           <p>
@@ -89,47 +94,47 @@
       <h2>My Skills</h2>
       <div class="skills-container">
         <div class="skills-img-container center-container">
-          <img src="assets/skills-hero.webp" alt="skills" class="border-img" />
+          <img src="assets/skills-hero.webp" alt="skills" class="border-img" loading="lazy" />
         </div>
         <div class="skills-grid">
           <div class="card">
-            <img src="assets/icons8-react.svg" alt="html" />
+            <img src="assets/icons8-react.svg" alt="html" loading="lazy" />
             <span>React</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-css3.svg" alt="html" />
+            <img src="assets/icons8-css3.svg" alt="html" loading="lazy" />
             <span>CSS</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-nodejs.svg" alt="html" />
+            <img src="assets/icons8-nodejs.svg" alt="html" loading="lazy" />
             <span>Node</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-spring-boot.svg" alt="html" />
+            <img src="assets/icons8-spring-boot.svg" alt="html" loading="lazy" />
             <span>Spring Boot</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-postgresql.svg" alt="html" />
+            <img src="assets/icons8-postgresql.svg" alt="html" loading="lazy" />
             <span>PostgreSQL</span>
           </div>
           <div class="card">
-            <img src="assets/mysql-svgrepo-com.svg" alt="html" />
+            <img src="assets/mysql-svgrepo-com.svg" alt="html" loading="lazy" />
             <span>MySQL</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-mongodb.svg" alt="html" />
+            <img src="assets/icons8-mongodb.svg" alt="html" loading="lazy" />
             <span>MongoDB</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-docker.svg" alt="html" />
+            <img src="assets/icons8-docker.svg" alt="html" loading="lazy" />
             <span>Docker</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-git.svg" alt="html" />
+            <img src="assets/icons8-git.svg" alt="html" loading="lazy" />
             <span>Git</span>
           </div>
           <div class="card">
-            <img src="assets/icons8-kubernetes.svg" alt="html" />
+            <img src="assets/icons8-kubernetes.svg" alt="html" loading="lazy" />
             <span>Kubernetes</span>
           </div>
 
@@ -139,19 +144,20 @@
     <section id="hobbies" class="hobbies center-container">
       <h2>My Hobbies</h2>
       <div class="hobbies-img-container center-container">
-        <img src="assets/casual-life-3d-man-searching-music-with-phone (2).webp" alt="hobbies" class="border-img" />
+        <img loading="lazy" src="assets/casual-life-3d-man-searching-music-with-phone (2).webp" alt="hobbies"
+          class="border-img" />
       </div>
       <div class="hobbies-grid">
         <div class="card">
-          <img src="assets/3d-fluency-music-note.png" alt="html" />
+          <img src="assets/3d-fluency-music-note.png" alt="html" loading="lazy" />
           <span>Music</span>
         </div>
         <div class="card">
-          <img src="assets/casual-life-3d-arcade-joystick-green.png" alt="html" />
+          <img src="assets/casual-life-3d-arcade-joystick-green.png" alt="html" loading="lazy" />
           <span>Games</span>
         </div>
         <div class="card">
-          <img src="assets/casual-life-3d-green-notebook-with-orange-bookmark.png" alt="html" />
+          <img loading="lazy" src="assets/casual-life-3d-green-notebook-with-orange-bookmark.png" alt="html" />
           <span>Reading</span>
         </div>
         <div class="card">
@@ -159,11 +165,11 @@
           <span>Learning</span>
         </div>
         <div class="card">
-          <img src="assets/3d-fluency-movie-video-camera.png" alt="html" />
+          <img loading="lazy" src="assets/3d-fluency-movie-video-camera.png" alt="html" />
           <span>Movies</span>
         </div>
         <div class="card">
-          <img src="assets/3d-fluency-generated-photos.png" alt="html" />
+          <img loading="lazy" src="assets/3d-fluency-generated-photos.png" alt="html" />
           <span>Coding</span>
         </div>
       </div>
@@ -173,12 +179,12 @@
       <h2>Qualification</h2>
       <div class="qualification-block center-container">
         <div class="qualification-img-container center-container">
-          <img src="assets/qualification-hero.png" alt="qualification" class="border-img" />
+          <img loading="lazy" src="assets/qualification-hero.png" alt="qualification" class="border-img" />
         </div>
         <div class="qualification-flex center-container">
           <div class="cards-work">
             <div class="title">
-              <img src="assets/icons8-square.svg" alt="html" />
+              <img loading="lazy" src="assets/icons8-square.svg" alt="html" />
               <h3>Work</h3>
             </div>
             <div class="cards">
@@ -193,7 +199,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="assets/logo_sas.png" alt="html" />
+                <img src="assets/logo_sas.png" alt="html" loading="lazy" />
                 <div class="sas card-content ">
                   <span>IT Consultant</span>
                   <p>Provide professional consulting services, support, implementation of technological infrastructure,
@@ -205,24 +211,24 @@
           </div>
           <div class="cards-education">
             <div class="title">
-              <img src="assets/icons8-square.svg" alt="html" />
+              <img src="assets/icons8-square.svg" alt="html" loading="lazy" />
               <h3>Education</h3>
             </div>
             <div class="cards">
               <div class="card">
-                <img src="assets/U_Sergio_Arboleda_logo.png" alt="html" />
+                <img src="assets/U_Sergio_Arboleda_logo.png" alt="html" loading="lazy" />
                 <div class="card-content">
                   <span>Electronic Engineer</span>
                 </div>
               </div>
               <div class="card">
-                <img src="assets/Escudo_UD.svg" alt="html" />
+                <img src="assets/Escudo_UD.svg" alt="html" loading="lazy" />
                 <div class="card-content">
                   <span>Intermediate Backend Developer</span>
                 </div>
               </div>
               <div class="card">
-                <img src="assets/guia-cursos-one.webp" alt="html" />
+                <img src="assets/guia-cursos-one.webp" alt="html" loading="lazy" />
                 <div class="card-content">
                   <span>Frontend Developer</span>
                 </div>
@@ -237,13 +243,13 @@
       <h2>My Work</h2>
       <div class="work-img-container center-container">
         <img src="assets/3d-casual-life-young-people-discussing-team-project-at-a-laptop.webp" alt="work"
-          class="border-img" />
+          class="border-img" loading="lazy" />
       </div>
       <div class="projects">
         <div class="project">
           <div class="info">
             <div class="title">
-              <img src="assets/icons8-circle.svg" alt="html" />
+              <img src="assets/icons8-circle.svg" alt="html" loading="lazy" />
               <h3>Encrypter</h3>
             </div>
             <span class="subtitle">Javascript | HTML | CSS</span>
@@ -252,14 +258,15 @@
           </div>
           <div class="view">
             <a href="https://andrewslaxe.github.io/Encriptador/" class="btn">View Project</a>
-            <img src="assets/icons8-arrow (1).svg" alt="html" />
+            <img src="assets/icons8-arrow (1).svg" alt="html" loading="lazy" />
           </div>
-          <img src="assets/[removal.ai]_eb9d4fab-b0a2-49a1-823a-337b290a8546.png" alt="encryptor" class="project-img" />
+          <img loading="lazy" src="assets/[removal.ai]_eb9d4fab-b0a2-49a1-823a-337b290a8546.png" alt="encryptor"
+            class="project-img" />
         </div>
         <div class="project">
           <div class="info">
             <div class="title">
-              <img src="assets/icons8-circle.svg" alt="html" />
+              <img loading="lazy" src="assets/icons8-circle.svg" alt="html" />
               <h3>Rick and Morty</h3>
             </div>
             <span class="subtitle">Angular | CSS</span>
@@ -268,14 +275,14 @@
           </div>
           <div class="view">
             <a href="https://andrewslaxe.github.io/RickAndMorty/" class="btn">View Project</a>
-            <img src="assets/icons8-arrow (1).svg" alt="html" />
+            <img loading="lazy" src="assets/icons8-arrow (1).svg" alt="html" />
           </div>
-          <img class="project-img" src="assets/Diseño sin título (8).png" alt="Rick and Morty" />
+          <img loading="lazy" class="project-img" src="assets/Diseño sin título (8).png" alt="Rick and Morty" />
         </div>
         <div class="project">
           <div class="info">
             <div class="title">
-              <img src="assets/icons8-circle.svg" alt="html" />
+              <img loading="lazy" src="assets/icons8-circle.svg" alt="html" />
               <h3>Greenhouse Control</h3>
             </div>
             <span class="subtitle">React | Express | MongoDB</span>
@@ -285,22 +292,23 @@
           </div>
           <div class="view">
             <a href="https://greenhouse-frontend-iota.vercel.app/" class="btn">View Project</a>
-            <img src="assets/icons8-arrow (1).svg" alt="html" />
+            <img loading="lazy" src="assets/icons8-arrow (1).svg" alt="html" />
           </div>
-          <img class="project-img" src="assets/Copia de Diseño sin título.png" alt="Greenhouse Control" />
+          <img loading="lazy" class="project-img" src="assets/Copia de Diseño sin título.png"
+            alt="Greenhouse Control" />
         </div>
       </div>
     </section>
     <hr>
     <section id="contact">
       <div class="contact-title">
-        <img src="assets/icons8-hexagon.svg" alt="html" />
+        <img loading="lazy" .src="assets/icons8-hexagon.svg" alt="html" />
         <h2>Contact</h2>
       </div>
       <ul class="networks">
-        <li><a href="mailto:jaimeperaza2001@gmail.com">Mail</a></li>
-        <li><a href="https://www.linkedin.com/in/andresperaza/">Linkedin</a></li>
-        <li><a href="https://github.com/Andrewslaxe">Github</a></li>
+        <li><a href="mailto:jaimeperaza2001@gmail.com" target="_blank">Mail</a></li>
+        <li><a href="https://www.linkedin.com/in/andresperaza/" target="_blank">Linkedin</a></li>
+        <li><a href="https://github.com/Andrewslaxe" target="_blank">Github</a></li>
         <li><a href="assets/CV Jaime Peraza.pdf" target="_blank">Resume</a></li>
       </ul>
     </section>

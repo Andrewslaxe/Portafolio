@@ -48,6 +48,18 @@ a:hover {
   align-items: center;
 }
 
+#label {
+  display: none;
+}
+
+#menu span {
+  display: none;
+}
+
+#h1-name {
+  display: none;
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -408,6 +420,7 @@ header {
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .cards-education .card {
@@ -618,6 +631,15 @@ header {
   list-style: none;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.networks li a {
+  transition: all 0.3s ease;
+}
+
+
+.networks li a:hover {
+  color: #747474;
 }
 
 @media (min-width: 768px) {
