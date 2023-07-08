@@ -146,6 +146,7 @@ header {
   color: rgb(116, 116, 116);
 }
 
+
 .nav-list .active {
   color: var(--primary-orange);
 }
@@ -640,6 +641,10 @@ header {
 
 .networks li a:hover {
   color: #747474;
+}
+
+.networks li a:focus {
+  color: var(--primary-orange);
 }
 
 @media (min-width: 768px) {
